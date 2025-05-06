@@ -1,0 +1,58 @@
+components:
+  schema:
+    Noticias:
+      Noticia:
+        type: object
+        properties:
+          id:
+            type: string
+            description: id de la noticia
+          title:
+            type: string
+            description: Titulo de la noticia
+          body:
+            type: string
+            description: Cuerpo de la noticia
+          author:
+            type: string
+            description: Autor de la noticia
+          image:
+            type: string
+            description: imagen de la noticia
+          date:
+            type: date
+            description: fecha de publicacion de la noticia
+        example:
+          id: sdfsdf987sdf9sdfsd8fs0
+          title: ¡Se me corta internet!
+          body: Esperemos que mejore,,,.....
+          author: Mauricio Di Pietro
+          image: http://fsdf.com/sdfsdf.jpg
+          date: 05/05/2025
+      GetAll:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              example: 023402sdfsfsd4234ksjdjfsdfjn
+            title:
+              type: string
+              example: ¡Argentina Campeón de Mundo!
+            body:
+              type: string
+              example: Argentina se consagró ......
+            author:
+              type: string
+              example: Carlos Gomez
+            image:
+              type: string
+              example: http://sdfsdf.com/sdfsd.jpg
+      ErrorGetById:
+        type: object
+        properties:
+          msg:   
+            type: string
+            description: No se encontró el id ${id} en la base de datos.
+        example:
+          msg: No se encontró el id sdfsdf78sd78fsdf en la base de datos.         

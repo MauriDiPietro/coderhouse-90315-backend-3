@@ -1,0 +1,28 @@
+components:
+  parameters:
+    schemas:
+      BodyNoticia:
+        type: object
+        required:
+          - title
+          - body
+          - author
+          - image
+        properties:
+          title:
+            type: string
+            description: Titulo de la noticia
+          body:
+            type: string
+            description: Cuerpo de la noticia
+          author:
+            type: string
+            description: Autor de la noticia
+          image:
+            type: string
+            description: imagen de la noticia
+        example:
+          title: ¡Se me corta internet!
+          body: Esperemos que mejore,,,.....
+          author: Mauricio Di Pietro
+          image: http://fsdf.com/sdfsdf.jpg

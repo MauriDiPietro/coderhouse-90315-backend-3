@@ -1,0 +1,30 @@
+paths:
+  /news:
+    post:
+      tags:
+      - Noticias
+      summary: Registro de noticia
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/BodyNoticia'
+        required: true
+      responses:
+        200:
+          description: Se registra la noticia correctamente
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schema/Noticias/Noticia'
+        404:
+          description: error busqueda noticia
+          content:
+            applicacion/json:
+              schema:
+                $ref: '#/components/schema/Noticias/ErrorGetById'
+    get:
+  /news/{id}:
+    get:
+    put:
+    delete:              
